@@ -13,21 +13,7 @@ services:
       - GROUP_ID=1001
       - DEVICE=/dev/ttyACM0
       - TZ=America/Denver
-#      - WEB_FILE_MANAGER=0
-#    volumes:
-#      - "/docker/handbrake:/config:rw"
-#      - "/nfs/storage:/storage:ro"
-#      #- "/8tb/storage:/storage:ro"
-#      - "/docker/handbrake/watch:/watch:rw"
-#      #- "/docker/handbrake/output:/output:rw"
-#      - "/nfs/output:/output:rw"
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
     privileged: true
-#    healthcheck:
-#      test: curl --fail http://localhost:5800 || exit 1
-#      interval: 90s
-#      timeout: 10s
-#      retries: 3
-#      start_period: 10s
     restart: unless-stopped
