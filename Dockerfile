@@ -7,7 +7,7 @@ LABEL maintainer="danmogger <danmogger@gmail.com>"
 LABEL documentation="https://github.com/danmogger/gps-ntp"
 
 ### Installs
-RUN yum -y install gpsd gpsd-clients ntpsec
+RUN yum -y install gpsd gpsd-clients ntpsec && yum clean all
 
 ### Ports
 EXPOSE 123/udp
