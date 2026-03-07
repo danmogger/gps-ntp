@@ -4,7 +4,7 @@ ARG BUILD_DATE
 ### About this container
 LABEL build_info="danmogger/gps-ntp build-date:- ${BUILD_DATE}"
 LABEL maintainer="danmogger <danmogger@gmail.com>"
-LABEL documentation="https://github.com/danmogger/testrepo"
+LABEL documentation="https://github.com/danmogger/gps-ntp"
 
 ### Installs
 RUN yum -y install gpsd gpsd-clients ntpsec
