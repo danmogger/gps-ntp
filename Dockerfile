@@ -1,4 +1,6 @@
-FROM fedora
+FROM dhi.io/alpine-base:3.23-alpine3.23-dev
+#FROM fedora
+
 ARG BUILD_DATE
 
 ### About this container
@@ -7,7 +9,8 @@ LABEL maintainer="danmogger <danmogger@gmail.com>"
 LABEL documentation="https://github.com/danmogger/gps-ntp"
 
 ### Installs
-RUN yum -y install gpsd gpsd-clients ntpsec && yum clean all
+#RUN yum -y install gpsd gpsd-clients ntpsec && yum clean all
+RUN apk add --no-cache gpsd gpsd-clients ntpsec
 
 ### Ports
 EXPOSE 123/udp
