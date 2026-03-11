@@ -9,8 +9,8 @@ services:
     ports:
       - "123:123/udp"
     environment:
-      - USER_ID=1001
-      - GROUP_ID=1001
+      - USER_ID=1000
+      - GROUP_ID=1000
       - DEVICE=/dev/ttyACM0
       - TZ=America/Denver
     devices:
