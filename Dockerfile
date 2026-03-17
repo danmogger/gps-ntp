@@ -9,6 +9,8 @@ LABEL maintainer="danmogger <danmogger@gmail.com>"
 LABEL documentation="https://github.com/danmogger/gps-ntp"
 
 ### Installs
+RUN mkdir /var/NTP
+RUN chmod 1777 /var/NTP
 RUN apk add --no-cache gpsd gpsd-clients ntpsec
 #RUN yum -y install gpsd gpsd-clients ntpsec && yum clean all
 
