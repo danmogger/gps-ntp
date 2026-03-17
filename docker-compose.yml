@@ -2,7 +2,7 @@ version: '4'
 services:
   gps-ntp:
     container_name: gps-ntp
-    image: dduncandocker/gps-ntp
+    image: dduncandocker/gps-ntp:latest
     cap_add:
       - SYS_TIME
     build: .
