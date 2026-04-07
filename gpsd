@@ -11,7 +11,7 @@ USBAUTO="false"
 # DEVICES="/dev/ttyACM1"
 
 # Other options you want to pass to gpsd
-GPSD_OPTIONS="-n"
+GPSD_OPTIONS="-n -b -r"
 #GPSD_OPTIONS="-n -D 1"
 
 ENABLED="true"

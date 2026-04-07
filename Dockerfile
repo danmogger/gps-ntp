@@ -18,7 +18,7 @@ RUN apk add --no-cache gpsd gpsd-clients ntpsec
 EXPOSE 123/udp
 
 ### NTP startup script
-COPY newpoint.sh /root/newpoint.sh
+COPY start.sh /root/start.sh
 COPY gpsd /etc/default/gpsd
 COPY ntp.conf /etc/ntp.conf
 
@@ -26,5 +26,4 @@ COPY ntp.conf /etc/ntp.conf
 HEALTHCHECK CMD ntpq -p || exit 1
 
 ### Start script
-ENTRYPOINT ["sh", "-c", "/root/newpoint.sh"]
-#ENTRYPOINT [ "/bin/sh", "/opt/startup.sh" ]
+ENTRYPOINT ["sh", "-c", "/root/start.sh"]
